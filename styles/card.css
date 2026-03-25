@@ -1,17 +1,15 @@
-
 .card {
   width: clamp(375px, 100%, 700px);
-  margin: 50px auto;
+  margin: 54px auto;
   background-color: #fff;
   border: 2px solid #000;
-
 }
 
 .card__title {
-  font-family: var(--main-font);
+  font-family: var(--main-font), Arial, sans-serif;
   font-variation-settings: "wght" var(--font-weight-bold);
   font-size: 18px;
-  padding: 5px 10px;
+  padding: 4px 10px;
   border-bottom: 2px solid #000;
 }
 
@@ -30,28 +28,35 @@
   position: absolute;
   top: 25px;
   right: 25px;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
   opacity: 0.5;
   mix-blend-mode: hard-light;
   color: #000;
+  text-shadow:
+    -1px 0 var(--text-stroke-color),
+    0 1px var(--text-stroke-color),
+    0 -1px var(--text-stroke-color);
 }
 
 @supports (-webkit-text-stroke: 1px #000) {
   .card__label {
     -webkit-text-stroke: 1px var(--text-stroke-color);
+    text-shadow: none;
   }
 }
-
 
 .card__content {
   padding: 25px;
   display: flex;
   flex-direction: column;
-  gap: 27px;
+  gap: 25px;
   border-top: 2px solid #000;
-  
+}
 
+.card__text {
+  font-size: 18px;
+  line-height: 21px;
 }
 
 .card__footer {
@@ -70,20 +75,15 @@
   display: flex;
   align-items: center;
   height: 38px;
+}
 
+.card__like-button {
+  min-width: 130px;
+  min-height: 38px;
 }
 
 .like-icon {
-display: block;
-}
-
-.button {
-  background: transparent;
-  border: 2px solid #000;
-  cursor: pointer;
-  padding: 9px 17px;
-  font-family: var(--accent-font);
-  font-size: 14px;
+  display: block;
 }
 
 @media (width <= 375px) {
@@ -92,37 +92,34 @@ display: block;
   }
 }
 
-.card__image--1 {
-  filter: saturate(1.3);
+.card__image--saturated {
+  filter: saturate(1.5);
 }
 
-.card__image--2 {
-  filter: grayscale(0.5);
+.card__image--grayscale {
+  filter: grayscale(1);
 }
 
-.card__image--3 {
-  filter: contrast(1.2) brightness(0.9);
+.card__image--hue-rotated {
+  filter: hue-rotate(90deg);
 }
 
-.card__image--4 {
-  filter: sepia(0.5);
+.card__image--sepia {
+  filter: sepia(0.8);
 }
 
-.card__image--5 {
-  filter: brightness(1.2) saturate(0.8);
+.card__image--inverted {
+  filter: invert(0.2);
 }
 
-.card__image--6 {
-  filter: grayscale(0.3) brightness(1.1);
+.card__image--contrast {
+  filter: brightness(0.6) contrast(1.5);
 }
 
-.card__image--7 {
-  filter: saturate(0.5) brightness(0.8);
+.card__image--desaturated {
+  filter: saturate(0.2) brightness(0.8);
 }
 
-.card__image--8 {
-  filter: contrast(1.1) brightness(1.1) saturate(1.2);
+.card__image--mixed {
+  filter: hue-rotate(180deg) saturate(1.5) brightness(0.9);
 }
-
-
-

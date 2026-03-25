@@ -7,12 +7,9 @@
 }
 
 .dialog[open] {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto auto;
   gap: 30px;
-  position: fixed;
-  inset: 0;
-  margin: auto;
 }
 
 .dialog::backdrop {
@@ -30,7 +27,7 @@
 }
 
 .dialog__text {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
   line-height: 1.5;
   text-transform: uppercase;
@@ -38,10 +35,16 @@
 
 .dialog__button {
   width: 100%;
-  padding: 9px;
-  font-family: var(--accent-font);
+  padding: 9px 17px;
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
   background: transparent;
   border: 2px solid #000;
   cursor: pointer;
+}
+
+@media (width <= 375px) {
+  .dialog {
+    padding: 40px;
+  }
 }
