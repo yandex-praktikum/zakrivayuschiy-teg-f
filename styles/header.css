@@ -6,7 +6,7 @@
   background-color: #fff;
   border: 2px solid #000;
   width: clamp(375px, 100%, 700px);
-  margin: 100px auto 0;
+  margin: 100px auto;
 }
 
 .header__title {

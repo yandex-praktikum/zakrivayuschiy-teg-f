@@ -45,6 +45,6 @@
 
 @media (width <= 375px) {
   .dialog {
-    padding: 40px;
+    padding: 30px 40px;
   }
 }

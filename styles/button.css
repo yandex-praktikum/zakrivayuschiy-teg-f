@@ -71,7 +71,7 @@
 }
 
 .card__icon-button:focus-visible {
-  border-color: var(--color-accent);
+  outline: 2px solid var(--color-accent);
 }
 
 @media (width <= 375px) {

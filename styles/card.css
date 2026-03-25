@@ -69,7 +69,7 @@
 
 .card__icon-button {
   background: transparent;
-  border: none;
+  border: 2px solid transparent;
   cursor: pointer;
   padding: 0;
   display: flex;
