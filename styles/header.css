@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(122px, 20vw, 130px) 0;
+  background-color: #fff;
+  border: 2px solid #000;
+  width: clamp(375px, 100%, 700px);
+  margin: 100px auto;
+}
+
+.header__title {
+  font-family: var(--accent-font), fantasy;
+  font-size: clamp(0.875rem, 0.226rem + 2.77vw, 1.438rem);
+  text-transform: uppercase;
+  padding-top: 20px;
+  line-height: 1;
+}
+
+.header__logo-text {
+  font-family: var(--accent-font), fantasy;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.header__logo {
+  text-decoration: none;
+}
